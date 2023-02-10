@@ -7,6 +7,7 @@ def tap(coords: tuple[int, int]):
     :param coords: Tuple of screen coordinates where tap should occur  (x,y)
     :return: None
     """
+
     finger_down(coords)   # Simulate finger touching screen
     finger_up()   # Simulate finger leaving the screen
 
@@ -46,15 +47,18 @@ def spread(start_f1: tuple[int, int], end_f1: tuple[int, int],
     :param num_steps: Number of steps used for linear interpolation between start and end. Use higher number for smoother movement.
     :return: None
     """
+
     # Press Down
     two_fingers_down(start_f1, start_f2)
 
     x1_step = int((end_f1[0] - start_f1[0]) / num_steps)
     y1_step = int((end_f1[1] - start_f1[1]) / num_steps)
     finger_1_offset = (x1_step, y1_step)
+
     x2_step = int((end_f2[0] - start_f2[0]) / num_steps)
     y2_step = int((end_f2[1] - start_f2[1]) / num_steps)
     finger_2_offset = (x2_step, y2_step)
+
     for i in range(num_steps):
         move_two_fingers(finger_1_offset, finger_2_offset)
         sleep(0.01)
