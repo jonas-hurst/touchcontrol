@@ -1,2 +1,2 @@
-from controls import *
-from actions import *
+from .controls import *
+from .actions import *
