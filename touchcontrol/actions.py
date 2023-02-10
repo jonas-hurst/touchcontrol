@@ -65,10 +65,3 @@ def spread(start_f1: tuple[int, int], end_f1: tuple[int, int],
 
     # Pull Up
     two_fingers_up()
-
-
-# Examples:
-if __name__ == "__main__":
-    # tap((1400, 400))
-    # wipe((1000, 600), (1800, 700), 100)
-    spread((1800, 600), (1800, 400), (1800, 700), (1800, 900), num_steps=50)
